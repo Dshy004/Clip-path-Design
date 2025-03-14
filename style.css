@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    resize: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    transition: all 0.2s ease;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    padding: 20px;
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #2c2828;
+}
+
+.container {
+    max-width: 425px;
+    max-height: 425px;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    white-space: nowrap;
+    position: relative;
+    flex-wrap: nowrap;
+}
+
+.card {
+    width: 400px;
+    height: 400px;
+    position: relative;
+    flex-shrink: 0;
+    margin: 0 12.5px;
+    scroll-snap-align: start;
+}
+.card-child {
+    position: absolute;
+}
+.card-child.one {
+    top: 0;
+    left: 0;
+    border-radius: 25px;
+    width: 175px;
+    height: 175px;
+}
+.card-child.two {
+    width: 100%;
+    height: 100%;
+    clip-path: path('M 225,0 L 375,0 A 25,25 0,0,1 400,25 L 400,375 A 25,25 0,0,1 375,400 L 25,400 A 25,25 0,0,1 0,375 L 0,225 A 25,25 0,0,1 25,200 L 175,200 A 25,25 0,0,0 200,175 L 200,25 A 25,25 0,0,1 225,0 Z');
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+.buttons button {
+    margin: 0 10px;
+    font-weight: 600;
+    font-size: 45px;
+    background-color: transparent;
+    color: #f5f5f5;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: transform 0.2s ease;
+}
+.buttons button:hover {
+    color: #716e6e;
+}
+.buttons button:active {
+    transform: scale(0.85);
+}
